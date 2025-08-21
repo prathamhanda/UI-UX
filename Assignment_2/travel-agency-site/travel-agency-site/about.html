@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About / Contact • GlobeTrek Travel</title>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/script.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+      <a href="index.html" class="brand">
+        <img src="https://e7.pngegg.com/pngimages/269/407/png-clipart-earth-globe-world-logo-earth-globe-logo.png" alt="Globe logo" width="28" height="28" />
+        <span>GlobeTrek Travel</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="packages.html" >Packages</a></li>
+          <li><a href="booking.html" >Book</a></li>
+          <li><a href="gallery.html" >Gallery</a></li>
+          <li><a href="about.html" class='active'>About / Contact</a></li>
+        </ul>
+        <button id="mobileMenu" class="hamburger" aria-label="Open menu" aria-controls="menuDrawer" aria-expanded="false">☰</button>
+      </nav>
+    </header>
+    <aside id="menuDrawer" class="drawer" aria-hidden="true">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About / Contact</a></li>
+      </ul>
+    </aside>
+
+<main class="container">
+
+<section class="about">
+  <h1>About GlobeTrek Travel</h1>
+  <p>We are a boutique travel agency helping explorers craft unforgettable journeys since 2012. From city breaks to bucket-list expeditions, our specialists tailor trips to your style and budget.</p>
+
+  <h2>Contact Us</h2>
+  <ul class="contact-list">
+    <li>Email: <a href="mailto:hello@globetrek.example">hello@globetrek.example</a></li>
+    <li>Phone: <a href="tel:+15551234567">+1 (555) 123‑4567</a></li>
+    <li>Address: 42 Wanderlust Ave, Anywhere</li>
+  </ul>
+
+  <h2>Follow Us</h2>
+  <div class="social">
+    <a aria-label="Instagram" href="#" rel="noopener">
+      <!-- Instagram icon -->
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></svg>
+    </a>
+    <a aria-label="Twitter" href="#" rel="noopener">
+      <!-- Twitter icon -->
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.38 8.59 8.59 0 0 1-2.72 1.04 4.29 4.29 0 0 0-7.33 3.92A12.17 12.17 0 0 1 3.15 4.6a4.28 4.28 0 0 0 1.33 5.72 4.25 4.25 0 0 1-1.94-.54v.05a4.29 4.29 0 0 0 3.44 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.6 8.6 0 0 1 2 19.53a12.12 12.12 0 0 0 6.57 1.93c7.89 0 12.2-6.54 12.2-12.2 0-.19 0-.39-.01-.58A8.7 8.7 0 0 0 24 6.3a8.5 8.5 0 0 1-2.54.7z"/></svg>
+    </a>
+    <a aria-label="Facebook" href="#" rel="noopener">
+      <!-- Facebook icon -->
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M9 8H7v3h2v9h4v-9h2.642L16 8h-3V6.667C13 6 13.149 6 14 6h2V3h-2.5C10.57 3 9 4.657 9 7.111V8z"/></svg>
+    </a>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <p>© <span id="year"></span> GlobeTrek Travel • Crafted with ♥ for wanderers.</p>
+</footer>
+</body>
+</html>

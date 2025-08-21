@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Packages • GlobeTrek Travel</title>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/script.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+      <a href="index.html" class="brand">
+        <img src="https://e7.pngegg.com/pngimages/269/407/png-clipart-earth-globe-world-logo-earth-globe-logo.png" alt="Globe logo" width="28" height="28" />
+        <span>GlobeTrek Travel</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="packages.html" class='active'>Packages</a></li>
+          <li><a href="booking.html" >Book</a></li>
+          <li><a href="gallery.html" >Gallery</a></li>
+          <li><a href="about.html" >About / Contact</a></li>
+        </ul>
+        <button id="mobileMenu" class="hamburger" aria-label="Open menu" aria-controls="menuDrawer" aria-expanded="false">☰</button>
+      </nav>
+    </header>
+    <aside id="menuDrawer" class="drawer" aria-hidden="true">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About / Contact</a></li>
+      </ul>
+    </aside>
+
+<main class="container">
+
+<section>
+  <h1>Tour Packages</h1>
+  <p>Browse our best-selling packages. All prices are per person and include accommodation and guided tours.</p>
+  <div class="table-wrapper" role="region" aria-labelledby="pkg-table-caption" tabindex="0">
+    <table class="packages">
+      <caption id="pkg-table-caption">Available Tour Packages</caption>
+      <thead>
+        <tr>
+          <th>Package</th>
+          <th>Destination</th>
+          <th>Duration</th>
+          <th>Price (USD)</th>
+          <th>Highlights</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Paris Essentials</td>
+          <td>Paris, France</td>
+          <td>5 Days</td>
+          <td data-price="1299">$1,299</td>
+          <td>Louvre, Seine Cruise, Eiffel priority</td>
+          <td><a class="btn tiny" href="booking.html?pkg=Paris%20Essentials&dest=Paris%2C%20France">Book</a></td>
+        </tr>
+        <tr>
+          <td>Japan Explorer</td>
+          <td>Tokyo, Kyoto</td>
+          <td>7 Days</td>
+          <td data-price="1999">$1,999</td>
+          <td>Tea ceremony, Mt. Fuji day trip</td>
+          <td><a class="btn tiny" href="booking.html?pkg=Japan%20Explorer&dest=Tokyo%2C%20Kyoto">Book</a></td>
+        </tr>
+        <tr>
+          <td>Greek Island Hopping</td>
+          <td>Santorini, Mykonos</td>
+          <td>6 Days</td>
+          <td data-price="1799">$1,799</td>
+          <td>Caldera cruise, beach day</td>
+          <td><a class="btn tiny" href="booking.html?pkg=Greek%20Island%20Hopping&dest=Santorini%2C%20Mykonos">Book</a></td>
+        </tr>
+        <tr>
+          <td>Safari Adventure</td>
+          <td>Masai Mara, Kenya</td>
+          <td>5 Days</td>
+          <td data-price="1599">$1,599</td>
+          <td>Big Five game drive, village visit</td>
+          <td><a class="btn tiny" href="booking.html?pkg=Safari%20Adventure&dest=Masai%20Mara%2C%20Kenya">Book</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <p>Want a custom trip? <a href="booking.html">Tell us what you have in mind &rarr;</a></p>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <p>© <span id="year"></span> GlobeTrek Travel • Crafted with ♥ for wanderers.</p>
+</footer>
+</body>
+</html>

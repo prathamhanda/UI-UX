@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home • GlobeTrek Travel</title>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/script.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+      <a href="index.html" class="brand">
+        <img src="https://e7.pngegg.com/pngimages/269/407/png-clipart-earth-globe-world-logo-earth-globe-logo.png" alt="Globe logo" width="28" height="28" />
+        <span>GlobeTrek Travel</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="index.html" class='active'>Home</a></li>
+          <li><a href="packages.html" >Packages</a></li>
+          <li><a href="booking.html" >Book</a></li>
+          <li><a href="gallery.html" >Gallery</a></li>
+          <li><a href="about.html" >About / Contact</a></li>
+        </ul>
+        <button id="mobileMenu" class="hamburger" aria-label="Open menu" aria-controls="menuDrawer" aria-expanded="false">☰</button>
+      </nav>
+    </header>
+    <aside id="menuDrawer" class="drawer" aria-hidden="true">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About / Contact</a></li>
+      </ul>
+    </aside>
+
+<main class="container">
+
+<section class="hero" role="banner" aria-label="Promoted destinations">
+  <div class="hero-content">
+    <h1>Find Your Next Adventure</h1>
+    <p>Curated trips, transparent pricing, and memories that last a lifetime.</p>
+    <a class="btn primary" href="packages.html">Explore Packages</a>
+    <a class="btn" href="booking.html">Book Now</a>
+  </div>
+  <img class="hero-image" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Traveler overlooking a scenic mountain valley" />
+</section>
+
+<section class="intro">
+  <h2>Why travel with GlobeTrek?</h2>
+  <ul class="benefits">
+    <li><strong>Handpicked Itineraries:</strong> Built by experts and locals.</li>
+    <li><strong>Best Price Promise:</strong> No hidden fees, flexible dates.</li>
+    <li><strong>24×7 Support:</strong> We’re a message away, wherever you are.</li>
+  </ul>
+</section>
+
+<section class="tips">
+  <h2>Travel Tips</h2>
+  <ol>
+    <li>Keep digital and paper copies of your documents.</li>
+    <li>Pack light—layers beat bulk.</li>
+    <li>Notify your bank before international travel.</li>
+    <li>Carry a universal adapter and a small first-aid kit.</li>
+    <li>Learn a few local phrases—it goes a long way!</li>
+  </ol>
+</section>
+
+<section class="must-visit">
+  <h2>Must‑Visit Places This Season</h2>
+  <div class="cards">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop" alt="Eiffel Tower in Paris at dusk" />
+      <div>
+        <h3>Paris, France</h3>
+        <p>Art, fashion, cafés—and that iconic skyline.</p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1549693578-d683be217e58?q=80&w=1200&auto=format&fit=crop" alt="Snow-capped Mount Fuji behind Chureito Pagoda" />
+      <div>
+        <h3>Tokyo & Mount Fuji</h3>
+        <p>Neon nights, tranquil temples, and stunning vistas.</p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1200&auto=format&fit=crop" alt="Santorini white-and-blue cliffside houses" />
+      <div>
+        <h3>Santorini, Greece</h3>
+        <p>Sunsets you’ll never forget, beaches you’ll never want to leave.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <p>© <span id="year"></span> GlobeTrek Travel • Crafted with ♥ for wanderers.</p>
+</footer>
+</body>
+</html>
