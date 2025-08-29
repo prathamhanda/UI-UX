@@ -9,64 +9,10 @@ This assignment involves creating a comprehensive website for **Saturnalia 2025*
 - **Sub Group:** 2Q14
 - **Assignment:** 3
 
-## Website Features
 
-### 🏠 **Homepage (index.html)**
-- Hero section with fest branding
-- Event highlights and announcements
-- Call-to-action for registration
-- Navigation to all sections
+## Demo Video
 
-### 🎪 **Events Page (events.html)**
-- Comprehensive list of fest events
-- Event categories and descriptions
-- Timing and venue information
-- Event-specific details
-
-### 📅 **Schedule Page (schedule.html)**
-- Day-wise event schedule
-- Time slots and venue mapping
-- Easy-to-read schedule format
-- Quick navigation between days
-
-### 🖼️ **Gallery Page (gallery.html)**
-- Photo gallery from previous years
-- Visual showcase of fest highlights
-- Responsive image layout
-- Interactive gallery experience
-
-### 📞 **Contact & FAQs Page (contact.html)**
-- Contact information for organizers
-- Frequently Asked Questions
-- Support and help desk details
-- Location and directions
-
-### ✅ **Registration Page (register.html)**
-- Event registration form
-- User-friendly registration process
-- Form validation and submission
-- Registration confirmation
-
-## Technologies Used
-- **HTML5** - Semantic markup and structure
-- **Tailwind CSS** - Utility-first CSS framework for styling
-- **Google Fonts (Inter)** - Modern typography
-- **JavaScript** - Interactive elements and functionality
-- **Responsive Design** - Mobile-first approach
-
-## Design Principles Applied
-
-### 🎨 **Visual Design**
-- **Dark Theme:** Modern black/gray color scheme with yellow accents
-- **Typography:** Clean Inter font family for readability
-- **Color Palette:** Gray-900 background with yellow-400 highlights
-- **Consistent Branding:** SATURNALIA brand identity throughout
-
-### 📱 **User Experience (UX)**
-- **Responsive Layout:** Optimized for all device sizes
-- **Intuitive Navigation:** Clear menu structure and navigation flow
-- **Accessibility:** Semantic HTML and proper contrast ratios
-- **Performance:** Optimized loading with CDN resources
+![Bakchodi](https://raw.githubusercontent.com/prathamhanda/UI-UX/refs/heads/main/Assignment_3/Saturnalia%202025%20-%20Thapar%20Institute%20of%20Engineering%20%26%20Technology%20-%20Google%20Chrome%202025-08-22%2000-07-27.gif)
 
 ### 🔧 **Technical Implementation**
 - **Mobile-First Design:** Responsive breakpoints for different screens
@@ -113,9 +59,6 @@ Assignment_3/
 - **Information Architecture:** Organizing content for optimal user flow
 - **Brand Consistency:** Maintaining visual identity across pages
 - **User Journey Mapping:** Designing logical navigation paths
-
-## Demo Video
-
 
 
 ## Future Enhancements
