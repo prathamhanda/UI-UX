@@ -8,6 +8,11 @@
 ## About This Repository
 This repository contains all my submissions and projects for the college subject **UI/UX Design**. Each assignment demonstrates different aspects of user interface and user experience design principles.
 
+## Demo Video
+
+![Bakchodi](https://raw.githubusercontent.com/prathamhanda/UI-UX/refs/heads/main/Assignment_4/Saturnalia%202025%20-%20Thapar%20Institute%20of%20Engineering%20%26%20Technology%20-%20Google%20Chrome%202025-08-30%2001-43-48.gif)
+
+
 ## Repository Structure
 ```
 UI-UX/
@@ -40,8 +45,6 @@ UI-UX/
 - CSS3
 - Responsive Web Design
 - UI/UX Design Principles
-
-
 
 
 ## Contact
