@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Saturnalia 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header & Navigation -->
+    <header id="main-navigation" class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container flex-container navbar">
+            <a href="index.html" class="text-3xl font-black text-gradient animate-pulse">SATURNALIA</a>
+            <ul class="nav-menu hidden md:flex">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="events.html" class="nav-link text-yellow-400 font-semibold border-b-2 border-yellow-400 pb-1">Events</a></li>
+                <li><a href="schedule.html" class="nav-link">Schedule</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact & FAQs</a></li>
+                <li><a href="register.html" class="btn-primary">Register Now</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <ul id="mobile-menu" class="nav-menu md:hidden px-6 pb-4">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="events.html" class="nav-link text-yellow-400 font-semibold">Events</a></li>
+            <li><a href="schedule.html" class="nav-link">Schedule</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link">Contact & FAQs</a></li>
+            <li><a href="register.html" class="btn-primary text-center">Register Now</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1 class="section-title text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in">Competitions & Events</h1>
+        <p class="text-center text-gray-300 mb-12 max-w-3xl mx-auto animate-slide-in">
+            Dive into an incredible range of competitions designed to challenge your skills, creativity, and passion across technology and culture.
+        </p>
+                    <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-2">CodeChronicle</h3>
+                        <p class="text-gray-300">An intense 24-hour hackathon where you build innovative solutions to real-world problems. Team up and code your way to glory.</p>
+                    </li>
+                    <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-2">RoboWars</h3>
+                        <p class="text-gray-300">Design, build, and battle your custom robots in a thrilling arena. May the best machine win!</p>
+                    </li>
+                    <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-2">Circuitrix</h3>
+                        <p class="text-gray-300">A challenging circuit design and simulation competition for electronics enthusiasts. Test your knowledge and practical skills.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Cultural Events -->
+            <div>
+                <h2 class="text-3xl font-semibold text-yellow-400 mb-6">Cultural Events</h2>
+                <ul class="space-y-6">
+                    <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-2">Groove Gala</h3>
+                        <p class="text-gray-300">The ultimate dance-off. Solo or in a group, show off your moves and set the stage on fire.</p>
+                    </li>
+                    <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-2">Symphony Stars</h3>
+                        <p class="text-gray-300">A battle of the bands and solo singing competition. Let your music speak to the hearts of the audience.</p>
+                    </li>
+                    <li class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-2">Nukkad Natak</h3>
+                        <p class="text-gray-300">Street play competition focusing on powerful social themes. Bring your stories to life and inspire change.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 mt-16">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                 <a href="#" class="hover:text-yellow-400">Facebook</a>
+                 <a href="#" class="hover:text-yellow-400">Instagram</a>
+                 <a href="#" class="hover:text-yellow-400">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Saturnalia, Thapar Institute of Engineering & Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Saturnalia 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-black text-yellow-400">SATURNALIA</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
+                <a href="events.html" class="hover:text-yellow-400 transition duration-300">Events</a>
+                <a href="schedule.html" class="hover:text-yellow-400 transition duration-300">Schedule</a>
+                <a href="gallery.html" class="hover:text-yellow-400 transition duration-300">Gallery</a>
+                <a href="contact.html" class="hover:text-yellow-400 transition duration-300">Contact & FAQs</a>
+                <a href="register.html" class="bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-lg hover:bg-yellow-300 transition duration-300">Register Now</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="index.html" class="block py-2 hover:text-yellow-400">Home</a>
+            <a href="events.html" class="block py-2 hover:text-yellow-400">Events</a>
+            <a href="schedule.html" class="block py-2 hover:text-yellow-400">Schedule</a>
+            <a href="gallery.html" class="block py-2 hover:text-yellow-400">Gallery</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-400">Contact & FAQs</a>
+            <a href="register.html" class="block mt-2 bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-lg text-center hover:bg-yellow-300">Register Now</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">Participant Registration</h1>
+        <div class="w-24 h-1 bg-yellow-400 mx-auto mb-12"></div>
+
+        <div class="max-w-2xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
+            <form id="registrationForm">
+                <!-- Full Name -->
+                <div class="mb-6">
+                    <label for="fullName" class="block text-gray-300 mb-2 font-semibold">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                </div>
+
+                <!-- Email Address -->
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-300 mb-2 font-semibold">Email Address</label>
+                    <input type="email" id="email" name="email" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="mb-6">
+                    <label for="phone" class="block text-gray-300 mb-2 font-semibold">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                </div>
+
+                <!-- College Name -->
+                <div class="mb-6">
+                    <label for="college" class="block text-gray-300 mb-2 font-semibold">College Name</label>
+                    <input type="text" id="college" name="college" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                </div>
+
+                <!-- Events Selection -->
+                <div class="mb-8">
+                    <label class="block text-gray-300 mb-2 font-semibold">Select Event(s)</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <label class="flex items-center space-x-3 bg-gray-700 p-3 rounded-lg">
+                            <input type="checkbox" name="events" value="codechronicle" class="form-checkbox h-5 w-5 text-yellow-400 bg-gray-800 border-gray-600 rounded focus:ring-yellow-400">
+                            <span>CodeChronicle</span>
+                        </label>
+                        <label class="flex items-center space-x-3 bg-gray-700 p-3 rounded-lg">
+                            <input type="checkbox" name="events" value="robowars" class="form-checkbox h-5 w-5 text-yellow-400 bg-gray-800 border-gray-600 rounded focus:ring-yellow-400">
+                            <span>RoboWars</span>
+                        </label>
+                        <label class="flex items-center space-x-3 bg-gray-700 p-3 rounded-lg">
+                            <input type="checkbox" name="events" value="circuitrix" class="form-checkbox h-5 w-5 text-yellow-400 bg-gray-800 border-gray-600 rounded focus:ring-yellow-400">
+                            <span>Circuitrix</span>
+                        </label>
+                        <label class="flex items-center space-x-3 bg-gray-700 p-3 rounded-lg">
+                            <input type="checkbox" name="events" value="groovegala" class="form-checkbox h-5 w-5 text-yellow-400 bg-gray-800 border-gray-600 rounded focus:ring-yellow-400">
+                            <span>Groove Gala</span>
+                        </label>
+                        <label class="flex items-center space-x-3 bg-gray-700 p-3 rounded-lg">
+                            <input type="checkbox" name="events" value="symphonystars" class="form-checkbox h-5 w-5 text-yellow-400 bg-gray-800 border-gray-600 rounded focus:ring-yellow-400">
+                            <span>Symphony Stars</span>
+                        </label>
+                        <label class="flex items-center space-x-3 bg-gray-700 p-3 rounded-lg">
+                            <input type="checkbox" name="events" value="nukkadnatak" class="form-checkbox h-5 w-5 text-yellow-400 bg-gray-800 border-gray-600 rounded focus:ring-yellow-400">
+                            <span>Nukkad Natak</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit" class="w-full bg-yellow-400 text-gray-900 font-bold py-3 px-4 rounded-lg hover:bg-yellow-300 transition duration-300">Register</button>
+                </div>
+            </form>
+            <div id="successMessage" class="hidden mt-6 text-center bg-green-900/50 border border-green-500 text-green-300 px-4 py-3 rounded-lg">
+                Thank you for registering! We've received your information.
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 mt-16">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                 <a href="#" class="hover:text-yellow-400">Facebook</a>
+                 <a href="#" class="hover:text-yellow-400">Instagram</a>
+                 <a href="#" class="hover:text-yellow-400">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Saturnalia, Thapar Institute of Engineering & Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const registrationForm = document.getElementById('registrationForm');
+        const successMessage = document.getElementById('successMessage');
+        registrationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            registrationForm.style.display = 'none';
+            successMessage.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

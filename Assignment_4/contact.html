@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & FAQs - Saturnalia 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header & Navigation -->
+    <header id="main-navigation" class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container flex-container navbar">
+            <a href="index.html" class="text-3xl font-black text-gradient animate-pulse">SATURNALIA</a>
+            <ul class="nav-menu hidden md:flex">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="schedule.html" class="nav-link">Schedule</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link text-yellow-400 font-semibold border-b-2 border-yellow-400 pb-1">Contact & FAQs</a></li>
+                <li><a href="register.html" class="btn-primary">Register Now</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <ul id="mobile-menu" class="nav-menu md:hidden px-6 pb-4">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="schedule.html" class="nav-link">Schedule</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link text-yellow-400 font-semibold">Contact & FAQs</a></li>
+            <li><a href="register.html" class="btn-primary text-center">Register Now</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1 class="section-title text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in">Get In Touch</h1>
+        <p class="text-center text-gray-300 mb-12 max-w-3xl mx-auto animate-slide-in">
+            Have questions about Saturnalia 2025? We're here to help! Find answers to common questions or reach out to our team.
+        </p>
+
+        <div class="flex-container">
+            <!-- Contact Info -->
+            <div class="card flex-1">
+                <h2 class="text-3xl font-bold mb-6 text-yellow-400">Contact Information</h2>
+                <div class="space-y-4">
+                    <p><strong class="font-semibold">Email:</strong> <a href="mailto:contact@saturnalia.in" class="hover:text-yellow-300">contact@saturnalia.in</a></p>
+                    <p><strong class="font-semibold">Phone:</strong> +91 12345 67890</p>
+                    <p><strong class="font-semibold">Address:</strong> Thapar Institute of Engineering & Technology, Patiala, Punjab, India</p>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-yellow-400">Facebook</a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-400">Instagram</a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-400">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQs -->
+            <div>
+                <h2 class="text-3xl font-bold mb-6 text-yellow-400">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="bg-gray-800 p-4 rounded-lg cursor-pointer">
+                        <summary class="font-semibold flex justify-between items-center">
+                            Who can participate in Saturnalia?
+                            <span class="transform transition-transform duration-300 text-yellow-400">+</span>
+                        </summary>
+                        <p class="mt-4 text-gray-300">Saturnalia is open to all undergraduate and postgraduate students from any college or university across India.</p>
+                    </details>
+                    <details class="bg-gray-800 p-4 rounded-lg cursor-pointer">
+                        <summary class="font-semibold flex justify-between items-center">
+                            Is there a registration fee?
+                            <span class="transform transition-transform duration-300 text-yellow-400">+</span>
+                        </summary>
+                        <p class="mt-4 text-gray-300">Yes, there is a nominal registration fee for participation in most events. The fee structure is detailed on the registration page for each specific event.</p>
+                    </details>
+                    <details class="bg-gray-800 p-4 rounded-lg cursor-pointer">
+                        <summary class="font-semibold flex justify-between items-center">
+                            Will accommodation be provided for outstation participants?
+                            <span class="transform transition-transform duration-300 text-yellow-400">+</span>
+                        </summary>
+                        <p class="mt-4 text-gray-300">Yes, we provide accommodation facilities within the campus hostels for outstation participants on a first-come, first-served basis. Please indicate your requirement during registration.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 mt-16">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                 <a href="#" class="hover:text-yellow-400">Facebook</a>
+                 <a href="#" class="hover:text-yellow-400">Instagram</a>
+                 <a href="#" class="hover:text-yellow-400">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Saturnalia, Thapar Institute of Engineering & Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        const details = document.querySelectorAll("details");
+        details.forEach((detail) => {
+            detail.addEventListener("toggle", () => {
+                const summary = detail.querySelector("summary");
+                const icon = summary.querySelector("span");
+                if (detail.open) {
+                    icon.textContent = "-";
+                    icon.style.transform = "rotate(180deg)";
+                } else {
+                    icon.textContent = "+";
+                    icon.style.transform = "rotate(0deg)";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

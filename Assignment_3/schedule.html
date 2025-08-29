@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - Saturnalia 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-black text-yellow-400">SATURNALIA</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
+                <a href="events.html" class="hover:text-yellow-400 transition duration-300">Events</a>
+                <a href="schedule.html" class="text-yellow-400 font-semibold border-b-2 border-yellow-400 pb-1">Schedule</a>
+                <a href="gallery.html" class="hover:text-yellow-400 transition duration-300">Gallery</a>
+                <a href="contact.html" class="hover:text-yellow-400 transition duration-300">Contact & FAQs</a>
+                <a href="register.html" class="bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-lg hover:bg-yellow-300 transition duration-300">Register Now</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="index.html" class="block py-2 hover:text-yellow-400">Home</a>
+            <a href="events.html" class="block py-2 hover:text-yellow-400">Events</a>
+            <a href="schedule.html" class="block py-2 text-yellow-400 font-semibold">Schedule</a>
+            <a href="gallery.html" class="block py-2 hover:text-yellow-400">Gallery</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-400">Contact & FAQs</a>
+            <a href="register.html" class="block mt-2 bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-lg text-center hover:bg-yellow-300">Register Now</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">Event Schedule</h1>
+        <div class="w-24 h-1 bg-yellow-400 mx-auto mb-12"></div>
+
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead class="bg-gray-800">
+                    <tr>
+                        <th class="p-4 border-b border-gray-700">Event Name</th>
+                        <th class="p-4 border-b border-gray-700">Date</th>
+                        <th class="p-4 border-b border-gray-700">Time</th>
+                        <th class="p-4 border-b border-gray-700">Venue</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-gray-800/50">
+                    <tr>
+                        <td class="p-4 border-b border-gray-700 font-semibold text-yellow-400">Inauguration Ceremony</td>
+                        <td class="p-4 border-b border-gray-700">Oct 24, 2025</td>
+                        <td class="p-4 border-b border-gray-700">10:00 AM - 11:00 AM</td>
+                        <td class="p-4 border-b border-gray-700">Main Auditorium</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 border-b border-gray-700">CodeChronicle (Hackathon)</td>
+                        <td class="p-4 border-b border-gray-700">Oct 24 - Oct 25</td>
+                        <td class="p-4 border-b border-gray-700">Starts 12:00 PM</td>
+                        <td class="p-4 border-b border-gray-700">COS Labs</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 border-b border-gray-700">Groove Gala (Prelims)</td>
+                        <td class="p-4 border-b border-gray-700">Oct 24, 2025</td>
+                        <td class="p-4 border-b border-gray-700">2:00 PM - 5:00 PM</td>
+                        <td class="p-4 border-b border-gray-700">Open Air Theatre</td>
+                    </tr>
+                     <tr>
+                        <td class="p-4 border-b border-gray-700">RoboWars</td>
+                        <td class="p-4 border-b border-gray-700">Oct 25, 2025</td>
+                        <td class="p-4 border-b border-gray-700">11:00 AM - 4:00 PM</td>
+                        <td class="p-4 border-b border-gray-700">Mechanical Dept. Lawns</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 border-b border-gray-700">Symphony Stars (Finals)</td>
+                        <td class="p-4 border-b border-gray-700">Oct 25, 2025</td>
+                        <td class="p-4 border-b border-gray-700">6:00 PM - 9:00 PM</td>
+                        <td class="p-4 border-b border-gray-700">Main Stage</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 border-b border-gray-700">Nukkad Natak Finals</td>
+                        <td class="p-4 border-b border-gray-700">Oct 26, 2025</td>
+                        <td class="p-4 border-b border-gray-700">1:00 PM - 3:00 PM</td>
+                        <td class="p-4 border-b border-gray-700">Student Center</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 border-b border-gray-700">Closing Ceremony & DJ Night</td>
+                        <td class="p-4 border-b border-gray-700">Oct 26, 2025</td>
+                        <td class="p-4 border-b border-gray-700">7:00 PM Onwards</td>
+                        <td class="p-4 border-b border-gray-700">Main Stage</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 mt-16">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                 <a href="#" class="hover:text-yellow-400">Facebook</a>
+                 <a href="#" class="hover:text-yellow-400">Instagram</a>
+                 <a href="#" class="hover:text-yellow-400">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Saturnalia, Thapar Institute of Engineering & Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

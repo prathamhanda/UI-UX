@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - Saturnalia 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Schedule Table Styling */
+        .schedule-table {
+            background: var(--accent-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 20px 40px var(--shadow-dark);
+        }
+        
+        .schedule-table th {
+            background: linear-gradient(135deg, var(--primary-color), #f59e0b);
+            color: var(--secondary-color);
+            padding: 1rem;
+            font-weight: 700;
+            text-align: left;
+            border-bottom: 2px solid rgba(251, 191, 36, 0.3);
+        }
+        
+        .schedule-table td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+        
+        .schedule-table tr:hover td {
+            background: rgba(251, 191, 36, 0.1);
+        }
+        
+        .event-time {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .event-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+        
+        .category-technical {
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+        }
+        
+        .category-cultural {
+            background: rgba(236, 72, 153, 0.2);
+            color: #f9a8d4;
+        }
+        
+        .category-concert {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+        }
+        
+        .day-section {
+            margin-bottom: 3rem;
+        }
+        
+        .day-header {
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            padding: 1.5rem;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            border-left: 4px solid var(--primary-color);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header & Navigation -->
+    <header id="main-navigation" class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container flex-container navbar">
+            <a href="index.html" class="text-3xl font-black text-gradient animate-pulse">SATURNALIA</a>
+            <ul class="nav-menu hidden md:flex">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="schedule.html" class="nav-link text-yellow-400 font-semibold border-b-2 border-yellow-400 pb-1">Schedule</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact & FAQs</a></li>
+                <li><a href="register.html" class="btn-primary">Register Now</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <ul id="mobile-menu" class="nav-menu md:hidden px-6 pb-4">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="schedule.html" class="nav-link text-yellow-400 font-semibold">Schedule</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link">Contact & FAQs</a></li>
+            <li><a href="register.html" class="btn-primary text-center">Register Now</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1 class="section-title text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in">Event Schedule</h1>
+        <p class="text-center text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-in">
+            Get ready for three days of non-stop excitement! Here's your complete guide to all events, competitions, and performances.
+        </p>
+
+        <!-- Audio Greeting Section -->
+        <div class="audio-section animate-fade-in">
+            <h2 class="text-2xl font-bold mb-4">🎵 Welcome Message from Our Organizers</h2>
+            <p class="mb-4">Listen to our special welcome message and event guide from the Saturnalia organizing committee!</p>
+            <div class="audio-controls">
+                <audio controls preload="metadata">
+                    <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+                    <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="flex-column text-center">
+                    <p class="text-sm">🎙️ Duration: 2 minutes</p>
+                    <p class="text-sm">📱 Enable audio for the full experience!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced Schedule with Day-wise Organization -->
+        <div class="day-section animate-slide-in">
+            <div class="day-header">
+                <h2 class="text-3xl font-bold text-gradient">Day 1 - October 24, 2025</h2>
+                <p class="text-gray-300 mt-2">Opening Day - Technical Events & Cultural Kickoff</p>
+            </div>
+            <div class="schedule-table">
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th>Event</th>
+                            <th>Time</th>
+                            <th>Venue</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Inauguration Ceremony</strong><br>
+                                <small class="text-gray-400">Grand opening with celebrity guests</small>
+                            </td>
+                            <td class="event-time">10:00 AM - 11:00 AM</td>
+                            <td>Main Auditorium</td>
+                            <td><span class="event-category category-concert">Opening</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>CodeChronicle (Hackathon Begins)</strong><br>
+                                <small class="text-gray-400">24-hour coding marathon starts</small>
+                            </td>
+                            <td class="event-time">12:00 PM</td>
+                            <td>COS Labs</td>
+                            <td><span class="event-category category-technical">Technical</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Groove Gala (Prelims)</strong><br>
+                                <small class="text-gray-400">Dance competition preliminary rounds</small>
+                            </td>
+                            <td class="event-time">2:00 PM - 5:00 PM</td>
+                            <td>Open Air Theatre</td>
+                            <td><span class="event-category category-cultural">Cultural</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Day 2 Schedule -->
+        <div class="day-section animate-slide-in">
+            <div class="day-header">
+                <h2 class="text-3xl font-bold text-gradient">Day 2 - October 25, 2025</h2>
+                <p class="text-gray-300 mt-2">Peak Day - Major Competitions & Pro Shows</p>
+            </div>
+            <div class="schedule-table">
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th>Event</th>
+                            <th>Time</th>
+                            <th>Venue</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>RoboWars Championship</strong><br>
+                                <small class="text-gray-400">Battle of the mechanical warriors</small>
+                            </td>
+                            <td class="event-time">11:00 AM - 4:00 PM</td>
+                            <td>Mechanical Dept. Lawns</td>
+                            <td><span class="event-category category-technical">Technical</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Symphony Stars (Finals)</strong><br>
+                                <small class="text-gray-400">Musical talent showcase finals</small>
+                            </td>
+                            <td class="event-time">6:00 PM - 9:00 PM</td>
+                            <td>Main Stage</td>
+                            <td><span class="event-category category-cultural">Cultural</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Day 3 Schedule -->
+        <div class="day-section animate-slide-in">
+            <div class="day-header">
+                <h2 class="text-3xl font-bold text-gradient">Day 3 - October 26, 2025</h2>
+                <p class="text-gray-300 mt-2">Grand Finale - Finals & Closing Ceremony</p>
+            </div>
+            <div class="schedule-table">
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th>Event</th>
+                            <th>Time</th>
+                            <th>Venue</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Nukkad Natak Finals</strong><br>
+                                <small class="text-gray-400">Street play competition finals</small>
+                            </td>
+                            <td class="event-time">1:00 PM - 3:00 PM</td>
+                            <td>Student Center</td>
+                            <td><span class="event-category category-cultural">Cultural</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Closing Ceremony & DJ Night</strong><br>
+                                <small class="text-gray-400">Grand finale with awards & celebration</small>
+                            </td>
+                            <td class="event-time">7:00 PM Onwards</td>
+                            <td>Main Stage</td>
+                            <td><span class="event-category category-concert">Concert</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Quick Info Cards -->
+        <div class="flex-container justify-center mt-12">
+            <div class="card max-w-sm text-center">
+                <h3 class="text-xl font-bold text-gradient mb-2">📍 Venue Map</h3>
+                <p class="text-gray-300 mb-4">Download the interactive campus map to navigate easily between venues.</p>
+                <a href="#" class="btn-primary">Download Map</a>
+            </div>
+            <div class="card max-w-sm text-center">
+                <h3 class="text-xl font-bold text-gradient mb-2">🔔 Event Alerts</h3>
+                <p class="text-gray-300 mb-4">Get real-time notifications about event timings and updates.</p>
+                <a href="#" class="btn-primary">Enable Notifications</a>
+            </div>
+            <div class="card max-w-sm text-center">
+                <h3 class="text-xl font-bold text-gradient mb-2">🎫 My Schedule</h3>
+                <p class="text-gray-300 mb-4">Create your personalized event schedule and set reminders.</p>
+                <a href="register.html" class="btn-primary">Customize Schedule</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 mt-16">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                 <a href="#" class="hover:text-yellow-400">Facebook</a>
+                 <a href="#" class="hover:text-yellow-400">Instagram</a>
+                 <a href="#" class="hover:text-yellow-400">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Saturnalia, Thapar Institute of Engineering & Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle with enhanced animations
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Audio controls enhancement
+        const audioElement = document.querySelector('audio');
+        if (audioElement) {
+            audioElement.addEventListener('loadstart', () => {
+                console.log('Audio loading started');
+            });
+            
+            audioElement.addEventListener('canplay', () => {
+                console.log('Audio ready to play');
+            });
+            
+            // Auto-pause other media when audio plays
+            audioElement.addEventListener('play', () => {
+                const videos = document.querySelectorAll('video');
+                videos.forEach(video => video.pause());
+            });
+        }
+
+        // Intersection Observer for animations
+        const animateElements = document.querySelectorAll('.animate-fade-in, .animate-slide-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) translateX(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        animateElements.forEach(element => {
+            element.style.opacity = '0';
+            if (element.classList.contains('animate-slide-in')) {
+                element.style.transform = 'translateX(-30px)';
+            } else {
+                element.style.transform = 'translateY(30px)';
+            }
+            element.style.transition = 'all 0.8s ease-out';
+            observer.observe(element);
+        });
+
+        // Enhanced table row interactions
+        const tableRows = document.querySelectorAll('.schedule-table tbody tr');
+        tableRows.forEach((row, index) => {
+            // Staggered animation for table rows
+            row.style.opacity = '0';
+            row.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                row.style.transition = 'all 0.5s ease-out';
+                row.style.opacity = '1';
+                row.style.transform = 'translateY(0)';
+            }, index * 150 + 500);
+            
+            // Enhanced hover effects
+            row.addEventListener('mouseenter', () => {
+                row.style.transform = 'translateX(10px) scale(1.02)';
+                row.style.boxShadow = '0 5px 15px rgba(251, 191, 36, 0.2)';
+            });
+            
+            row.addEventListener('mouseleave', () => {
+                row.style.transform = 'translateX(0) scale(1)';
+                row.style.boxShadow = 'none';
+            });
+        });
+
+        // Category filter functionality
+        const categoryBadges = document.querySelectorAll('.event-category');
+        categoryBadges.forEach(badge => {
+            badge.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const category = badge.textContent.toLowerCase();
+                
+                tableRows.forEach(row => {
+                    const rowBadge = row.querySelector('.event-category');
+                    if (rowBadge) {
+                        const rowCategory = rowBadge.textContent.toLowerCase();
+                        if (rowCategory.includes(category)) {
+                            row.style.display = '';
+                            row.style.backgroundColor = 'rgba(251, 191, 36, 0.1)';
+                            setTimeout(() => {
+                                row.style.backgroundColor = '';
+                            }, 1000);
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    }
+                });
+            });
+            
+            // Add cursor pointer to indicate clickable
+            badge.style.cursor = 'pointer';
+            badge.title = 'Click to filter by this category';
+        });
+
+        // Reset filter button (dynamically created)
+        const resetFilterBtn = document.createElement('button');
+        resetFilterBtn.textContent = 'Show All Events';
+        resetFilterBtn.className = 'btn-primary mt-4';
+        resetFilterBtn.style.display = 'none';
+        
+        resetFilterBtn.addEventListener('click', () => {
+            tableRows.forEach(row => row.style.display = '');
+            resetFilterBtn.style.display = 'none';
+        });
+        
+        // Add reset button after clicking any filter
+        categoryBadges.forEach(badge => {
+            badge.addEventListener('click', () => {
+                if (!document.querySelector('.reset-filter-btn')) {
+                    resetFilterBtn.classList.add('reset-filter-btn');
+                    document.querySelector('.container').appendChild(resetFilterBtn);
+                }
+                resetFilterBtn.style.display = 'inline-block';
+            });
+        });
+    </script>
+</body>
+</html>

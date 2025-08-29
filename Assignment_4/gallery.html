@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Saturnalia 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Enhanced Gallery Grid Layout */
+        .gallery-masonry {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+        
+        /* Special grid items for varied layout */
+        .gallery-item:nth-child(3n+1) {
+            grid-row-end: span 2;
+        }
+        
+        .gallery-item:nth-child(5n+1) {
+            grid-column-end: span 2;
+        }
+        
+        .gallery-item:nth-child(7n+1) {
+            grid-row-end: span 3;
+        }
+        
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-masonry {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item:nth-child(3n+1),
+            .gallery-item:nth-child(5n+1),
+            .gallery-item:nth-child(7n+1) {
+                grid-column-end: auto;
+                grid-row-end: auto;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header & Navigation -->
+    <header id="main-navigation" class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container flex-container navbar">
+            <a href="index.html" class="text-3xl font-black text-gradient animate-pulse">SATURNALIA</a>
+            <ul class="nav-menu hidden md:flex">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="schedule.html" class="nav-link">Schedule</a></li>
+                <li><a href="gallery.html" class="nav-link text-yellow-400 font-semibold border-b-2 border-yellow-400 pb-1">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact & FAQs</a></li>
+                <li><a href="register.html" class="btn-primary">Register Now</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </nav>
+        <ul id="mobile-menu" class="nav-menu md:hidden px-6 pb-4">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="schedule.html" class="nav-link">Schedule</a></li>
+            <li><a href="gallery.html" class="nav-link text-yellow-400 font-semibold">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link">Contact & FAQs</a></li>
+            <li><a href="register.html" class="btn-primary text-center">Register Now</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1 class="section-title text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in">Photo Gallery</h1>
+        <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto animate-slide-in">A glimpse into the energy, excitement, and unforgettable moments from previous years.</p>
+
+        <!-- Gallery Filter -->
+        <div class="flex-container justify-center mb-8">
+            <button class="btn-primary gallery-filter active" data-filter="all">All Events</button>
+            <button class="btn-primary gallery-filter" data-filter="technical">Technical</button>
+            <button class="btn-primary gallery-filter" data-filter="cultural">Cultural</button>
+            <button class="btn-primary gallery-filter" data-filter="concerts">Concerts</button>
+        </div>
+
+        <!-- Enhanced Gallery Grid -->
+        <div class="gallery-masonry" id="gallery-container">
+            <div class="gallery-item" data-category="concerts" data-image="https://placehold.co/600x800/1a202c/fbbf24?text=Concert+Night">
+                <img src="https://placehold.co/600x800/1a202c/fbbf24?text=Concert+Night" alt="Concert Night" loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Concert Night 2024</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="technical" data-image="https://placehold.co/600x400/1a202c/fbbf24?text=RoboWars+Arena">
+                <img src="https://placehold.co/600x400/1a202c/fbbf24?text=RoboWars+Arena" alt="RoboWars Arena" loading="lazy">
+                <div class="gallery-overlay">
+                    <span>RoboWars Championship</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="cultural" data-image="https://placehold.co/600x600/1a202c/fbbf24?text=Dance+Competition">
+                <img src="https://placehold.co/600x600/1a202c/fbbf24?text=Dance+Competition" alt="Dance Competition" loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Dance Battle Finals</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="technical" data-image="https://placehold.co/600x400/1a202c/fbbf24?text=Hackathon+Teams">
+                <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Hackathon+Teams" alt="Hackathon Teams" loading="lazy">
+                <div class="gallery-overlay">
+                    <span>24-Hour Hackathon</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="cultural" data-image="https://placehold.co/600x800/1a202c/fbbf24?text=Fashion+Show">
+                <img src="https://placehold.co/600x800/1a202c/fbbf24?text=Fashion+Show" alt="Fashion Show" loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Fashion Fiesta</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="concerts" data-image="https://placehold.co/600x400/1a202c/fbbf24?text=Crowd+Energy">
+                <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Crowd+Energy" alt="Crowd Energy" loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Crowd Goes Wild</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="technical" data-image="https://placehold.co/600x500/1a202c/fbbf24?text=AI+Workshop">
+                <img src="https://placehold.co/600x500/1a202c/fbbf24?text=AI+Workshop" alt="AI Workshop" loading="lazy">
+                <div class="gallery-overlay">
+                    <span>AI/ML Workshop</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="cultural" data-image="https://placehold.co/600x400/1a202c/fbbf24?text=Drama+Performance">
+                <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Drama+Performance" alt="Drama Performance" loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Stage Drama</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="concerts" data-image="https://placehold.co/600x600/1a202c/fbbf24?text=DJ+Night">
+                <img src="https://placehold.co/600x600/1a202c/fbbf24?text=DJ+Night" alt="DJ Night" loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Electronic Night</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="technical" data-image="https://placehold.co/600x800/1a202c/fbbf24?text=Coding+Competition">
+                <img src="https://placehold.co/600x800/1a202c/fbbf24?text=Coding+Competition" alt="Coding Competition" loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Code Combat</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="cultural" data-image="https://placehold.co/600x400/1a202c/fbbf24?text=Band+Performance">
+                <img src="https://placehold.co/600x400/1a202c/fbbf24?text=Band+Performance" alt="Band Performance" loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Battle of Bands</span>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="technical" data-image="https://placehold.co/600x500/1a202c/fbbf24?text=Innovation+Expo">
+                <img src="https://placehold.co/600x500/1a202c/fbbf24?text=Innovation+Expo" alt="Innovation Expo" loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Tech Innovation Expo</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 mt-16">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                 <a href="#" class="hover:text-yellow-400">Facebook</a>
+                 <a href="#" class="hover:text-yellow-400">Instagram</a>
+                 <a href="#" class="hover:text-yellow-400">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Saturnalia, Thapar Institute of Engineering & Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Gallery filtering
+        const filterButtons = document.querySelectorAll('.gallery-filter');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeInUp 0.5s ease-out';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.getAttribute('data-image');
+                const imgAlt = item.querySelector('img').getAttribute('alt');
+                
+                lightboxImg.src = imgSrc;
+                lightboxImg.alt = imgAlt;
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+                closeLightbox();
+            }
+        });
+
+        // Lazy loading animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply initial animation styles
+        document.querySelectorAll('.animate-fade-in, .animate-slide-in').forEach(element => {
+            element.style.opacity = '0';
+            if (element.classList.contains('animate-slide-in')) {
+                element.style.transform = 'translateX(-30px)';
+            } else {
+                element.style.transform = 'translateY(30px)';
+            }
+            observer.observe(element);
+        });
+
+        // Gallery items entrance animation
+        galleryItems.forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            
+            setTimeout(() => {
+                item.style.transition = 'all 0.6s ease-out';
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    </script>
+</body>
+</html>
