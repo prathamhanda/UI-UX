@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home • GlobeTrek Travel</title>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/script.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+      <a href="index.html" class="brand">
+        <img src="https://e7.pngegg.com/pngimages/269/407/png-clipart-earth-globe-world-logo-earth-globe-logo.png" alt="Globe logo" width="28" height="28" />
+        <span>GlobeTrek Travel</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav" id="mainNav">
+          <li><a href="index.html" data-page="index">Home</a></li>
+          <li><a href="packages.html" data-page="packages">Packages</a></li>
+          <li><a href="booking.html" data-page="booking">Book</a></li>
+          <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+          <li><a href="about.html" data-page="about">About / Contact</a></li>
+        </ul>
+        <button id="mobileMenu" class="hamburger" aria-label="Open menu" aria-controls="menuDrawer" aria-expanded="false">☰</button>
+      </nav>
+    </header>
+    <aside id="menuDrawer" class="drawer" aria-hidden="true">
+      <ul>
+        <li><a href="index.html" data-page="index">Home</a></li>
+        <li><a href="packages.html" data-page="packages">Packages</a></li>
+        <li><a href="booking.html" data-page="booking">Book</a></li>
+        <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+        <li><a href="about.html" data-page="about">About / Contact</a></li>
+      </ul>
+    </aside>
+
+<main class="container">
+
+<section class="hero" role="banner" aria-label="Promoted destinations">
+  <div class="hero-content">
+    <h1>Find Your Next Adventure</h1>
+    <p>Curated trips, transparent pricing, and memories that last a lifetime.</p>
+    <a class="btn primary" href="packages.html">Explore Packages</a>
+    <a class="btn" href="booking.html">Book Now</a>
+  </div>
+  <img class="hero-image" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Traveler overlooking a scenic mountain valley" />
+</section>
+
+<section class="section">
+  <h2>Popular Destinations</h2>
+  <div class="cards" id="popularDestinations">
+    <!-- Will be populated by JavaScript -->
+  </div>
+</section>
+
+<section class="section">
+  <h2>Featured Packages</h2>
+  <div class="cards" id="featuredPackages">
+    <!-- Will be populated by JavaScript -->
+  </div>
+</section>
+
+<section class="section">
+  <h2>Why Choose GlobeTrek?</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>✈️ Curated Experiences</h3>
+      <p>Hand-picked destinations and activities for unforgettable memories.</p>
+    </div>
+    <div class="card">
+      <h3>💰 Transparent Pricing</h3>
+      <p>No hidden fees. What you see is what you pay.</p>
+    </div>
+    <div class="card">
+      <h3>🏆 Expert Guides</h3>
+      <p>Local experts who know the best spots and hidden gems.</p>
+    </div>
+    <div class="card">
+      <h3>🛡️ Travel Insurance</h3>
+      <p>Complete peace of mind with comprehensive travel coverage.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <p>© <span id="year"></span> GlobeTrek Travel • Crafted with ♥ for wanderers.</p>
+</footer>
+</body>
+</html>

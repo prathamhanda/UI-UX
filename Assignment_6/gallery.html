@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery • GlobeTrek Travel</title>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/script.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+      <a href="index.html" class="brand">
+        <img src="https://e7.pngegg.com/pngimages/269/407/png-clipart-earth-globe-world-logo-earth-globe-logo.png" alt="Globe logo" width="28" height="28" />
+        <span>GlobeTrek Travel</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav" id="mainNav">
+          <li><a href="index.html" data-page="index">Home</a></li>
+          <li><a href="packages.html" data-page="packages">Packages</a></li>
+          <li><a href="booking.html" data-page="booking">Book</a></li>
+          <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+          <li><a href="about.html" data-page="about">About / Contact</a></li>
+        </ul>
+        <button id="mobileMenu" class="hamburger" aria-label="Open menu" aria-controls="menuDrawer" aria-expanded="false">☰</button>
+      </nav>
+    </header>
+    <aside id="menuDrawer" class="drawer" aria-hidden="true">
+      <ul>
+        <li><a href="index.html" data-page="index">Home</a></li>
+        <li><a href="packages.html" data-page="packages">Packages</a></li>
+        <li><a href="booking.html" data-page="booking">Book</a></li>
+        <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+        <li><a href="about.html" data-page="about">About / Contact</a></li>
+      </ul>
+    </aside>
+
+<main class="container">
+
+<section>
+  <h1>Destination Gallery</h1>
+  <p>Get inspired by our travelers' favorite shots. Click on any image to view in full size.</p>
+  
+  <div class="gallery-controls">
+    <button id="gridToggle" class="btn secondary">Toggle Layout</button>
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+      <option value="nature">Nature</option>
+      <option value="culture">Culture</option>
+      <option value="adventure">Adventure</option>
+      <option value="city">City</option>
+    </select>
+  </div>
+  
+  <div class="gallery" id="galleryContainer">
+    <figure class="gallery-item" data-category="adventure">
+      <img src="https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+           alt="Sunrise hot air balloons over Cappadocia" 
+           data-large="https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+           data-title="Hot Air Balloons at Sunrise"
+           data-location="Cappadocia, Türkiye" />
+      <figcaption>Cappadocia, Türkiye</figcaption>
+    </figure>
+    
+    <figure class="gallery-item" data-category="nature">
+      <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?q=80&w=400&auto=format&fit=crop" 
+           alt="Safari jeep overlooking savannah at sunset" 
+           data-large="https://images.unsplash.com/photo-1526779259212-939e64788e3c?q=80&w=1200&auto=format&fit=crop"
+           data-title="African Safari at Sunset"
+           data-location="Masai Mara, Kenya" />
+      <figcaption>Masai Mara, Kenya</figcaption>
+    </figure>
+    
+    <figure class="gallery-item" data-category="culture">
+      <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=400&auto=format&fit=crop" 
+           alt="Cliffside village and sea in Santorini" 
+           data-large="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop"
+           data-title="Santorini Cliffside Village"
+           data-location="Santorini, Greece" />
+      <figcaption>Santorini, Greece</figcaption>
+    </figure>
+    
+    <figure class="gallery-item" data-category="city">
+      <img src="https://images.unsplash.com/photo-1549693578-d683be217e58?q=80&w=400&auto=format&fit=crop" 
+           alt="Tokyo crossing at night with neon signs" 
+           data-large="https://images.unsplash.com/photo-1549693578-d683be217e58?q=80&w=1200&auto=format&fit=crop"
+           data-title="Tokyo Night Crossing"
+           data-location="Tokyo, Japan" />
+      <figcaption>Tokyo, Japan</figcaption>
+    </figure>
+    
+    <figure class="gallery-item" data-category="culture">
+      <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?q=80&w=400&auto=format&fit=crop" 
+           alt="Eiffel Tower framed by trees" 
+           data-large="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?q=80&w=1200&auto=format&fit=crop"
+           data-title="Eiffel Tower Through Trees"
+           data-location="Paris, France" />
+      <figcaption>Paris, France</figcaption>
+    </figure>
+    
+    <figure class="gallery-item" data-category="adventure">
+      <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=400&auto=format&fit=crop" 
+           alt="Camel silhouettes walking across desert dunes" 
+           data-large="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=1200&auto=format&fit=crop"
+           data-title="Desert Camel Trek"
+           data-location="Merzouga, Morocco" />
+      <figcaption>Merzouga, Morocco</figcaption>
+    </figure>
+    
+    <figure class="gallery-item" data-category="nature">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=400&auto=format&fit=crop" 
+           alt="Northern lights over snowy landscape" 
+           data-large="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop"
+           data-title="Northern Lights Adventure"
+           data-location="Iceland" />
+      <figcaption>Iceland</figcaption>
+    </figure>
+    
+    <figure class="gallery-item" data-category="city">
+      <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=400&auto=format&fit=crop" 
+           alt="Dubai skyline at sunset" 
+           data-large="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1200&auto=format&fit=crop"
+           data-title="Dubai Modern Skyline"
+           data-location="Dubai, UAE" />
+      <figcaption>Dubai, UAE</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Image Modal -->
+<div id="imageModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-content">
+    <button class="modal-close" aria-label="Close modal">&times;</button>
+    <div class="modal-image-container">
+      <img id="modalImage" src="" alt="" />
+    </div>
+    <div class="modal-info">
+      <h3 id="modalTitle"></h3>
+      <p id="modalLocation"></p>
+    </div>
+    <div class="modal-navigation">
+      <button id="prevImage" class="modal-nav-btn" aria-label="Previous image">‹</button>
+      <button id="nextImage" class="modal-nav-btn" aria-label="Next image">›</button>
+    </div>
+  </div>
+</div>
+
+</main>
+<footer class="site-footer">
+  <p>© <span id="year"></span> GlobeTrek Travel • Crafted with ♥ for wanderers.</p>
+</footer>
+</body>
+</html>

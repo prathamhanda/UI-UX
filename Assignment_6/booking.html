@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Booking • GlobeTrek Travel</title>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/script.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+      <a href="index.html" class="brand">
+        <img src="https://e7.pngegg.com/pngimages/269/407/png-clipart-earth-globe-world-logo-earth-globe-logo.png" alt="Globe logo" width="28" height="28" />
+        <span>GlobeTrek Travel</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav" id="mainNav">
+          <li><a href="index.html" data-page="index">Home</a></li>
+          <li><a href="packages.html" data-page="packages">Packages</a></li>
+          <li><a href="booking.html" data-page="booking">Book</a></li>
+          <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+          <li><a href="about.html" data-page="about">About / Contact</a></li>
+        </ul>
+        <button id="mobileMenu" class="hamburger" aria-label="Open menu" aria-controls="menuDrawer" aria-expanded="false">☰</button>
+      </nav>
+    </header>
+    <aside id="menuDrawer" class="drawer" aria-hidden="true">
+      <ul>
+        <li><a href="index.html" data-page="index">Home</a></li>
+        <li><a href="packages.html" data-page="packages">Packages</a></li>
+        <li><a href="booking.html" data-page="booking">Book</a></li>
+        <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+        <li><a href="about.html" data-page="about">About / Contact</a></li>
+      </ul>
+    </aside>
+
+<main class="container">
+
+<section>
+  <h1>Booking Form</h1>
+  <p>Fill in your details and we'll confirm availability within 24 hours.</p>
+
+  <div class="booking-layout">
+    <div class="booking-form">
+      <form id="bookingForm" class="form" novalidate>
+        <fieldset>
+          <legend>Traveler Information</legend>
+          <div class="grid">
+            <label>Full Name
+              <input type="text" name="name" id="customerName" placeholder="Your full name" required />
+              <span class="error-message" id="nameError"></span>
+            </label>
+            <label>Email
+              <input type="email" name="email" id="customerEmail" placeholder="you@example.com" required />
+              <span class="error-message" id="emailError"></span>
+            </label>
+            <label>Phone
+              <input type="tel" name="phone" id="customerPhone" placeholder="+1 555 123 4567" required />
+              <span class="error-message" id="phoneError"></span>
+            </label>
+            <label>Number of Guests
+              <input type="number" name="guests" id="guestCount" min="1" max="10" value="1" required />
+              <span class="error-message" id="guestsError"></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Trip Details</legend>
+          <div class="grid">
+            <label>Package
+              <select name="package" id="package" required>
+                <option value="" disabled selected>Select package</option>
+                <!-- Will be populated by JavaScript -->
+              </select>
+              <span class="error-message" id="packageError"></span>
+            </label>
+            <label>Destination
+              <select name="destination" id="destination" required>
+                <option value="" disabled selected>Select destination</option>
+                <!-- Will be populated by JavaScript -->
+              </select>
+              <span class="error-message" id="destinationError"></span>
+            </label>
+            <label>Check-in Date
+              <input type="date" name="checkin" id="checkinDate" required />
+              <span class="error-message" id="checkinError"></span>
+            </label>
+            <label>Check-out Date
+              <input type="date" name="checkout" id="checkoutDate" required />
+              <span class="error-message" id="checkoutError"></span>
+            </label>
+          </div>
+          
+          <div class="grid">
+            <label>Promo Code
+              <input type="text" name="promoCode" id="promoCode" placeholder="Enter promo code" />
+              <span class="promo-status" id="promoStatus"></span>
+            </label>
+            <label>Weekend Departure
+              <input type="checkbox" name="weekendDeparture" id="weekendDeparture" />
+              <span class="checkbox-label">Departing on weekend (+10%)</span>
+            </label>
+          </div>
+          
+          <label>Special Requests
+            <textarea name="notes" rows="4" placeholder="Dietary needs, room type, celebrations…"></textarea>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="terms" id="termsCheckbox" required />
+            <span class="checkbox-label">I agree to the terms and conditions.</span>
+            <span class="error-message" id="termsError"></span>
+          </label>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" id="submitBtn" class="btn primary" disabled>Book Trip</button>
+          <button type="reset" class="btn">Clear Form</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="price-estimator">
+      <div class="card">
+        <h3>Price Estimator</h3>
+        <div id="priceBreakdown">
+          <div class="price-line">
+            <span>Base Package Price:</span>
+            <span id="basePrice">$0</span>
+          </div>
+          <div class="price-line">
+            <span>Number of Nights:</span>
+            <span id="nightsCount">0</span>
+          </div>
+          <div class="price-line">
+            <span>Number of Guests:</span>
+            <span id="guestsDisplay">1</span>
+          </div>
+          <div class="price-line seasonal-adjustment" id="seasonalLine" style="display: none;">
+            <span>Seasonal Adjustment:</span>
+            <span id="seasonalAdjustment">$0</span>
+          </div>
+          <div class="price-line weekend-surcharge" id="weekendLine" style="display: none;">
+            <span>Weekend Surcharge (+10%):</span>
+            <span id="weekendSurcharge">$0</span>
+          </div>
+          <div class="price-line guest-multiplier" id="guestLine" style="display: none;">
+            <span>Additional Guests (+20%):</span>
+            <span id="guestMultiplier">$0</span>
+          </div>
+          <div class="price-line promo-discount" id="promoLine" style="display: none;">
+            <span>Promo Discount:</span>
+            <span id="promoDiscount">-$0</span>
+          </div>
+          <hr>
+          <div class="price-line total">
+            <span><strong>Estimated Total:</strong></span>
+            <span id="totalPrice"><strong>$0</strong></span>
+          </div>
+        </div>
+        <div class="price-note">
+          <small>*Final price may vary based on availability and additional services</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <p>© <span id="year"></span> GlobeTrek Travel • Crafted with ♥ for wanderers.</p>
+</footer>
+</body>
+</html>

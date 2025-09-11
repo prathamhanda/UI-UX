@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Packages • GlobeTrek Travel</title>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/script.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+      <a href="index.html" class="brand">
+        <img src="https://e7.pngegg.com/pngimages/269/407/png-clipart-earth-globe-world-logo-earth-globe-logo.png" alt="Globe logo" width="28" height="28" />
+        <span>GlobeTrek Travel</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav" id="mainNav">
+          <li><a href="index.html" data-page="index">Home</a></li>
+          <li><a href="packages.html" data-page="packages">Packages</a></li>
+          <li><a href="booking.html" data-page="booking">Book</a></li>
+          <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+          <li><a href="about.html" data-page="about">About / Contact</a></li>
+        </ul>
+        <button id="mobileMenu" class="hamburger" aria-label="Open menu" aria-controls="menuDrawer" aria-expanded="false">☰</button>
+      </nav>
+    </header>
+    <aside id="menuDrawer" class="drawer" aria-hidden="true">
+      <ul>
+        <li><a href="index.html" data-page="index">Home</a></li>
+        <li><a href="packages.html" data-page="packages">Packages</a></li>
+        <li><a href="booking.html" data-page="booking">Book</a></li>
+        <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+        <li><a href="about.html" data-page="about">About / Contact</a></li>
+      </ul>
+    </aside>
+
+<main class="container">
+
+<section>
+  <h1>Tour Packages</h1>
+  <p>Browse our best-selling packages. All prices are per person and include accommodation and guided tours.</p>
+  
+  <div class="package-filters">
+    <label>
+      Season Filter:
+      <select id="seasonFilter">
+        <option value="">All Seasons</option>
+        <option value="peak">Peak Season</option>
+        <option value="off">Off Season</option>
+        <option value="shoulder">Shoulder Season</option>
+      </select>
+    </label>
+    <label>
+      Sort by:
+      <select id="sortPackages">
+        <option value="name">Package Name</option>
+        <option value="price">Final Price</option>
+        <option value="duration">Duration</option>
+        <option value="destination">Destination</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="table-wrapper" role="region" aria-labelledby="pkg-table-caption" tabindex="0">
+    <table class="packages" id="packagesTable">
+      <caption id="pkg-table-caption">Available Tour Packages</caption>
+      <thead>
+        <tr>
+          <th>Package</th>
+          <th>Destination</th>
+          <th>Duration</th>
+          <th>Base Price (USD)</th>
+          <th>Final Price (USD)</th>
+          <th>Season</th>
+          <th>Highlights</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="packagesTableBody">
+        <!-- Will be populated by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="note">
+    <p>Want a custom trip? <a href="booking.html">Tell us what you have in mind &rarr;</a></p>
+    <p class="pricing-note">
+      <strong>Pricing Notes:</strong><br>
+      • Peak season (Dec-Feb, Jun-Aug): +25% surcharge<br>
+      • Shoulder season (Mar-May, Sep-Nov): Standard pricing<br>
+      • Off season: -15% discount<br>
+      • Weekend departures: +10% surcharge
+    </p>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <p>© <span id="year"></span> GlobeTrek Travel • Crafted with ♥ for wanderers.</p>
+</footer>
+</body>
+</html>
