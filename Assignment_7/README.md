@@ -11,8 +11,7 @@ This assignment creates a dynamic to-do list application using HTML, CSS, and Ja
 
 ## Demo Video
 
-![Demonstration of To-Do List](https://res.cloudinary.com/dglcgpley/video/upload/v1758490439/To-Do_List_Application_-_Google_Chrome_2025-09-22_03-02-01_yhdn3l.mp4)
-
+<a href="https://drive.google.com/file/d/1NfRfN5V_on6hNZWSglcxvB7st_a0SyJO/view?usp=sharing"> Demonstration Video Link </a>
 
 ## Features Implemented
 
